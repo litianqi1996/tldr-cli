@@ -12,6 +12,7 @@ const VERSION = "0.1"
 func main() {
 	app := cli.NewApp()
 	app.Version = VERSION
+	app.Name = "TLDR"
 
 	app.Flags = []cli.Flag{
 		&cli.BoolFlag{

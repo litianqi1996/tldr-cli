@@ -7,8 +7,6 @@ import (
 	"strings"
 )
 
-// todo : bug in tldr   head and tail
-
 var (
 	titleShow       = color.New(color.FgWhite, color.Bold).PrintlnFunc()
 	referShow       = color.New(color.FgWhite).PrintlnFunc()
