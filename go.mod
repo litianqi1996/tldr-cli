@@ -1,4 +1,4 @@
-module tldr
+module github.com/litianqi1996/tldr
 
 go 1.14
 
