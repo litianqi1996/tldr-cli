@@ -51,7 +51,7 @@ func init() {
 		log.Println(err)
 	}
 	if !ok {
-		err = initConf(ConfPath)
+		err = initConf()
 		if err != nil {
 			log.Println(err)
 		}
@@ -59,7 +59,7 @@ func init() {
 	return
 }
 
-func initConf(path string) error {
+func initConf() error {
 	cf := &Config{
 		GitRepo:    DefaultRepo,
 		Language:   DefaultLanguage,
@@ -122,7 +122,7 @@ func StartUp() error {
 	if CheckLanguage(cf.Language) {
 		Language = cf.Language
 	} else {
-		return errors.New("language config invalid ")
+		return errors.New("language config invalid")
 	}
 	CheckExpire(cf.UpdateTime)
 

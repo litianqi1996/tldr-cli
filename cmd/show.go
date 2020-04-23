@@ -2,9 +2,10 @@ package cmd
 
 import (
 	"fmt"
-	"github.com/fatih/color"
 	"io/ioutil"
 	"strings"
+
+	"github.com/fatih/color"
 )
 
 var (
