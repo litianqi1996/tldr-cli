@@ -3,7 +3,6 @@ package cmd
 import (
 	"github.com/fatih/color"
 	"gopkg.in/src-d/go-git.v4"
-	"log"
 	"os"
 	"os/signal"
 	"syscall"
@@ -15,7 +14,7 @@ func SignalHandler() {
 	signal.Notify(c, os.Interrupt, syscall.SIGTERM)
 	go func() {
 		<-c
-		CleanRepo()
+		_ = CleanRepo()
 		os.Exit(0)
 	}()
 }
@@ -61,11 +60,8 @@ func UpdateRepo() error {
 	return err
 }
 
-func CleanRepo() {
-	err := os.RemoveAll(RepoPath)
-	if err != nil {
-		log.Println(err)
-	}
+func CleanRepo() error {
+	return os.RemoveAll(RepoPath)
 }
 
 var WarningShow = color.New(color.FgYellow).PrintlnFunc()

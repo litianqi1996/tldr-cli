@@ -26,6 +26,12 @@ func main() {
 			Usage:    "update tldr pages from gitrepo",
 			Required: false,
 		},
+		&cli.BoolFlag{
+			Name:     "clean",
+			Aliases:  []string{"c"},
+			Usage:    "clean tldr repo",
+			Required: false,
+		},
 	}
 
 	//  do not return err for https://github.com/urfave/cli/issues/707
@@ -40,10 +46,10 @@ func main() {
 
 	app.Action = func(c *cli.Context) error {
 		if c.Bool("update") {
-			err := cmd.UpdateRepo()
-			if err != nil {
-				return err
-			}
+			return cmd.UpdateRepo()
+		}
+		if c.Bool("clean") {
+			return cmd.CleanRepo()
 		}
 		if c.NArg() > 0 {
 			err := cmd.Getpage(c.Args().Get(0))

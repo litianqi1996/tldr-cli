@@ -12,7 +12,7 @@ var (
 	titleShow       = color.New(color.FgWhite, color.Bold).PrintlnFunc()
 	referShow       = color.New(color.FgWhite).PrintlnFunc()
 	instructionShow = color.New(color.FgGreen).PrintlnFunc()
-	commandShow     = color.New(color.FgCyan).PrintFunc() //not println
+	commandShow     = color.New(color.FgCyan).PrintFunc() // not println
 	argsShow        = color.New(color.FgRed).PrintFunc()
 )
 
@@ -25,11 +25,11 @@ func Getpage(cmd string) error {
 	if err != nil {
 		return err
 	}
-	Show(string(page))
+	show(string(page))
 	return nil
 }
 
-func Show(pages string) {
+func show(pages string) {
 
 	fs := format(pages)
 
