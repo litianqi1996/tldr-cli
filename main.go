@@ -13,6 +13,11 @@ func main() {
 	app := cli.NewApp()
 	app.Version = VERSION
 	app.Name = "TLDR"
+	app.Usage = "Too Long; Didn't Read"
+	app.HideVersion = true
+	app.HideHelpCommand = true
+	app.HideHelp = true
+	app.UsageText = "tldr [command]"
 
 	app.Flags = []cli.Flag{
 		&cli.BoolFlag{

@@ -16,7 +16,7 @@ import (
 )
 
 const (
-	DefaultRepo     = "https://github.com/tldr-pages/tldr.git"
+	DefaultRepo     = "https://github.com/tldr-pages/tldr"
 	DefaultLanguage = ""
 	ExpireTime      = 60 * 60 * 24 * 30
 )
