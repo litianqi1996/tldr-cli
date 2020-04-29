@@ -27,7 +27,7 @@ brews:
       owner: litianqi1996
       name: tldr
     folder: Formula
-    homepage: "https://github.com/litianqi1996/tldr-cli"
+    homepage: "https://github.com/litianqi1996/homebrew-taps"
     description: Simplified and community-driven man pages (tldr-pages).
     test: |
       system "#{bin}/tldr -version"

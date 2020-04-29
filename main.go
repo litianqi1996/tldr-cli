@@ -7,7 +7,7 @@ import (
 	"os"
 )
 
-const VERSION = "0.1"
+const VERSION = "0.5"
 
 func main() {
 	app := cli.NewApp()
@@ -16,7 +16,6 @@ func main() {
 	app.Usage = "Too Long; Didn't Read"
 	app.HideVersion = true
 	app.HideHelpCommand = true
-	app.HideHelp = true
 	app.UsageText = "tldr [command]"
 
 	app.Flags = []cli.Flag{
