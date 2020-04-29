@@ -19,7 +19,7 @@ brew install litianqi1996/taps/tldr
 ```
 tldr [command] 
 tldr -u/--update  //update tldr pages from gitrepo
-tldr -c/--clean   //clean tldr local
+tldr -c/--clean   //clean tldr local repo
 ```
 
 
