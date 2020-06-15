@@ -10,6 +10,7 @@ import (
 const VERSION = "0.5"
 
 func main() {
+	test
 	app := cli.NewApp()
 	app.Version = VERSION
 	app.Name = "TLDR"
