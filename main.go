@@ -1,16 +1,16 @@
 package main
 
 import (
+	"os"
+
 	"github.com/fatih/color"
 	"github.com/litianqi1996/tldr/cmd"
 	"github.com/urfave/cli/v2"
-	"os"
 )
 
 const VERSION = "0.5"
 
 func main() {
-	test
 	app := cli.NewApp()
 	app.Version = VERSION
 	app.Name = "TLDR"
