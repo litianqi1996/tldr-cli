@@ -1,4 +1,5 @@
 # tldr-cli
+[![Go Report Card](https://goreportcard.com/badge/github.com/litianqi1996/tldr-cli)](https://goreportcard.com/report/github.com/litianqi1996/tldr-cli)
 
 [![Go Report Card](https://goreportcard.com/badge/github.com/litianqi1996/tldr-cli)](https://goreportcard.com/report/github.com/litianqi1996/tldr-cli)
 
