@@ -1,0 +1,35 @@
+# This is an example goreleaser.yaml file with some sane defaults.
+# Make sure to check the documentation at http://goreleaser.com
+project_name: tldr
+before:
+  hooks:
+    - go mod download
+builds:
+
+archives:
+- replacements:
+    darwin: Darwin
+    linux: Linux
+    amd64: x86_64
+checksum:
+  name_template: 'checksums.txt'
+snapshot:
+  name_template: "{{ .Tag }}"
+changelog:
+  sort: asc
+  filters:
+    exclude:
+    - '^docs:'
+    - '^test:'
+brews:
+  -
+    github:
+      owner: litianqi1996
+      name: homebrew-taps
+    folder: Formula
+    homepage: "https://github.com/litianqi1996/tldr-cli"
+    description: Simplified and community-driven man pages (tldr-pages).
+    test: |
+      system "#{bin}/tldr -version"
+    install: |
+      bin.install "tldr"
