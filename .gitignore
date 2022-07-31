@@ -2,3 +2,4 @@
 # go vendor
 /vendor
 /dist
+dist/
