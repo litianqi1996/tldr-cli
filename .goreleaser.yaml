@@ -40,8 +40,3 @@ brews:
     folder: Formula
     homepage: "https://github.com/litianqi1996/tldr-cli"
     description: Simplified and community-driven man pages (tldr-pages).
-
-    test: |
-      system "#{bin}/tldr -version"
-    install: |
-      bin.install "tldr"
